@@ -1,6 +1,10 @@
 # qiankun-redux
 Use Redux in qiankun.
 
+# Get started
+
+    yarn add qiankun-redux
+
 ## In master
 
 ```js
@@ -33,24 +37,7 @@ registerMicroApps(
             },
         },
         // ...
-    ],
-    {
-        beforeLoad: [
-            (app) => {
-                console.log('[LifeCycle] before load %c%s', 'color: green;', app.name);
-            },
-            ],
-            beforeMount: [
-            (app) => {
-                console.log('[LifeCycle] before mount %c%o', 'color: green;', app.name);
-            },
-            ],
-            afterUnmount: [
-            (app) => {
-                console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name);
-            },
-        ],
-    },
+    ]
 );
 
 
