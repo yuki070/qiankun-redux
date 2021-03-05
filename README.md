@@ -3,8 +3,6 @@ Use Redux in qiankun.
 
 # Get started
 
-    yarn add qiankun-redux
-
 ## In master
 
 ```js
@@ -48,6 +46,7 @@ start();
 
 ## In Slave
 
+    yarn add qiankun-redux
 ### The `<App />` entry
 
 ```jsx
