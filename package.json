@@ -1,0 +1,64 @@
+{
+  "name": "qiankun-redux",
+  "version": "0.1.0",
+  "description": "Use Redux in qiankun",
+  "keywords": [
+    "react",
+    "redux",
+    "qiankun"
+  ],
+  "main": "./lib/index.js",
+  "unpkg": "dist/qiankun-redux.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "src",
+    "es"
+  ],
+  "repository": "https://github.com/yuki070/qiankun-redux.git",
+  "author": "yuki070 <jianqiang070@foxmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "babel src --out-dir es",
+    "build:umd": "cross-env NODE_ENV=development rollup -c -o dist/qiankun-redux.js",
+    "build:umd:min": "cross-env NODE_ENV=production rollup -c -o dist/qiankun-redux.min.js",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "clean": "rimraf lib dist es coverage"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3 || ^17",
+    "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-react-display-name": "^7.12.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "create-react-class": "^15.7.0",
+    "cross-env": "^7.0.2",
+    "es3ify": "^0.2.0",
+    "glob": "^7.1.6",
+    "prettier": "^2.1.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-test-renderer": "^16.14.0",
+    "redux": "^4.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.1",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.13.9"
+  }
+}
